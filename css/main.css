@@ -51,9 +51,7 @@ body{
 }
 .show{
     width: 1000px;
-    height: 420px;
-    position: absolute;
-    top: 80px;
+    height: 420px;;
 }
 .show img{
     width: 1000px;
@@ -62,9 +60,8 @@ body{
 }
 .product{
     width: 1000px;
-    height: 540px;
-    position: absolute;
-    top: 700px;
+    height: 600px;
+    margin-top: 150px;
 }
 .first-line {
     width: 1000px;
@@ -111,3 +108,5 @@ body{
     border: 1px solid black;
     border-radius: 10px;
 }
+
+    

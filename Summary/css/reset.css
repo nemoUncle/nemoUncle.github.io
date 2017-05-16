@@ -1,5 +1,17 @@
 .content{
-    background: white;
     width: 1000px;
-    height: 1024px;;
+    height: 1824px;;
+}
+.content ul li {
+    width: 100px;
+}
+.content ul li  a{
+   text-align: center;
+}
+#p{
+    
+    width: 1000px;
+    height: 1700px;
+    background: white;
+
 }
