@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML的精髓</title>
+</head>
+<body>
+	<header>
+		<section><h1>HTML的精髓</h1></section>
+		<section>
+			<p>我们都知道，前端技术最核心的三大技术是HTML，CSS和的javascrip.HTML定义网页结构，CSS定义网页外观，而javaScrip定义页面的行为。其中HTML和CSS是前端技术中最基础的东西，HTML更是基础中的基础。</p>
+		</section>
+	</header>
+	<main>
+		<section><h2>一、基础知识</h2>
+			<section>
+				<article><h3>1、HTML、XHTML和HTML5</h3>
+					<p>HTML 全称 HyperText Mark-up Language是构成网页文档的主要语言。我们常说的HTML就指的是HTML4.01. <br>
+					XHTML 全称 EXtensible HyperText Mark-up Language 它是XML风格的HTML4.01，更严格、更纯净的HTML4.01. <br>
+					XHTML标签必须闭合；XHTML标签及属性必须小写；XHTML标签属性必须用引号；XHTML标签用id代替name。
+					</p>
+				</article>
+			</section>
+			<section>
+				<article><h3>2、HTML5</h3>
+					<p>
+						（1）HTML5的文档类型极大简化: </p><xmp><!DOCTYPE html></xmp><br>
+						（2）标签不再区分大小:<xmp><div> 这是合法的</DIV></xmp>建议标签及属性都采用小写方式<br>
+						（3）属性值允许不加引号:<xmp><div id=wrapper style=color:red> 这样我是合法的</div></xmp>建议有引号。<br>
+						（4）允许部分属性值省略:<br>checked；readonly；defer；ismap；noherf；noshade；nowarp；selected；disabled；mulitiple；noresize；
+					<p></p>
+				</article>
+			</section>
+			<section>
+				<article><h3>3、div和span</h3>
+					<p>
+					div和span没有语义，一般配合css定义样式。div常用语页面中较大块的结构划分，span一般用来包含文字。
+					</p>
+				</article>
+			</section>
+			<section>
+				<article><h3>4、id、class和name</h3>
+					<p>
+					id属性具有唯一属性，搜索引擎识别一个页面结构，是根据标签的语义及id属性来识别的。<br>
+					</p><h4>HTML中属性ID和属性NAME有何区别？</h4>
+        			ID和Name都可以用来标识一个标记，Javascript分别有两个方法getElementById和getElementByName来定位Dom节点。<br>
+        			区别如下：<br>
+          			1、我们知道在网页做Post提交时，是以Form（即表单域）为单位进行提交的，一个Form里有若干个表单对象
+          			<xmp>(如<input type="text" name="UserName" value="请输入姓名"/>),</xmp>同一个页面里可以为多个Form（Asp.net不同，它只允许有一个，且名字必须为Form1），在表单表提交到服务器端后，可以直接通过Name属性取到表单域的值，却无法通过ID直接取到该表表单对象的值。<br>
+          			2、同一个Form里不能有多个name属性相同的HTML标记，但如果一个网页中有多个Form，则不同的Form里可以有同个Name属性的标记。而ID是全局的，在一个HTML文档里不能有多个节点使用相同的ID，无论它处在哪个Form里。<br>
+          			3、在建立CSS样式的时候，可以建立ID样式表（以＃为前缀），使具有该ID的样式直接应用该样式，而无法建立Name样式表。<br>
+          			4、在进行网页编辑时建议使用ID来标识一个节点，而不是使用Name（除非是为了Post提交的需要），同样使用Javascript进行Dom节点定位时建议使用getElementById方法，因为只有ID能唯一标识一个节点，而同一个网页里可能会有多个Name属性相同的节点，它们分别处在不同的Form里。	
+					<p></p>
+				</article>
+			</section>
+		</section>
+		<section>
+			<section>
+				<h2>二、语义化（不包含HTML5新增语义标签</h2>
+				<p>(1)HTML的重点不是在于你掌握了多少个标签，而是在于掌握标签的语义以及如何编写一个语义良好的页面。<br>
+  			(2)HTML的精髓就在于标签的语义，大部分标签都有它自身的语义。吧标签用对了地方，才是我们会真正的使用HTML。<br>
+  		(3)HTML是网页机构，CSS和Javascript知识从来修饰结构的，就像盖房子，房子装饰的再漂亮，地基不稳也容易崩塌。<br>
+  (4)在实际整站开发的工作中，编写的代码常常成千上万，如果我们都使用div和span来代替语义化标签，后期的维护非常困难。<br>
+  (5)尤其是搜索引擎，它不会根据一个页面的外观来判断那些是标题，那些是图片，它只会根据HTML代码来识别。<br>
+  (6)良好的语义化有利于：（1）利于开发调试和后期维护 （2）利于搜索引擎优化。<br>
+  (7)主要有：标题语义化、图片语义化、表格语义化、表单语义化等等。</p>
+  				<section>
+					<article><h3>1、标题语义化：</h3>
+				<p>一个页面只能有一个h1标签；h1~h6之间不要断层；不要用h1~h6来定义样式；不要用div来代替h1~h6。</p>
+					</article>
+				</section>
+				<section>
+					<article><h3>2、图片语义化：</h3>
+					<p>
+					alt属性和title属性<br>
+ &nbsp; &nbsp; &nbsp; &nbsp;alt属性是图片描述，给搜索引擎看的，并且当图片无法识别时，页面会显示alt中的文字。alt属性是img标签的必需属性。<br>
+ &nbsp; tltle属性也用于描述图片，给用户看的，并且当鼠标移到图片上的时候，会显示title中的内容。。title属性是img标签的可选属性。<br>
+ &nbsp; figure元素和figcaption元素<br>
+ &nbsp; &nbsp;图片+图注的效果 我们可以这样实现：<br>
+</p><xmp><div class=img-list>
+  <img src="" alt=""/>
+<div></xmp>
+          	 但这种实现方式语义化并不好，所以使用figure元素和figcaption元素来增强图片语义化。
+<xmp><figure>
+  <img src="" alt="">
+  <figcaption>注释内容</figcaption>
+</figure></xmp>&nbsp;
+				 	<p></p>
+					</article>
+				</section>
+				<section>
+					<article><h3>3、表格语义化：</h3>
+				<p>table &nbsp;表格； caption 标题； thead 表头；tbody 表身； tfoot 表尾； tr 行； th 表头单元格； td 表格单元格；<br>其中thead、tbody、tfoot这三个标签也是表格中非常重要的标签，他从语义上区分了表头、表身和表脚。大家往往忽视这三个标签。</p>
+					</article>
+				</section>
+				<section>
+					<article><h3>4、表单语义化：</h3>
+				<p></p><h4>label标签：</h4>
+				(1)label标签用于显示在输入控件旁边的说明性文字。也就是将某个表单元素和某段说明文字关联起来。<br>
+				(2)label标签的for属性所关联的表单元素id有两个作用：<br>
+语义上绑定了label元素和表单元素； 增强了鼠标可用性，也就是点击label中的文本时，其所关联的表单元素也会获得焦点。<br>
+<h4>fieldset和legend标签：</h4>(1)fieldset标签用来给表单元素进行分组；(2)legend标签用于定义一组表单的标题。<br>它们可以增强表单的语义并且也可以定义fieldset元素的disabled属性来禁用整个组中的元素表单。<p></p>
+					</article>
+				</section>
+				<section>
+					<article><h3>5、换行符&lt;br/&gt;:</h3>
+				<p>
+</p><xmp><div>
+  <span>标题</span><br/><br/>
+  <span>第一部分内容</span><br/>
+  <span>第二部分内容</span><br/>
+  <span>第三部分内容</span>
+</div></xmp>
+这种例子使用&lt;br/&gt;标签是错误方式，&lt;br/&gt;标签也有自己的语义，不能随便实现换行效果。W3C标准规定，&lt;br/&gt;标签仅仅用于段落中的换行，不能用于其他情况。也就是说&lt;br/&gt;标签只适用于p表亲内，不能用于其他标签。
+ 				<p></p>
+					</article>
+				</section>
+				<section>
+					<article><h3>6、img标签：</h3>
+				<p>（1）想在页面中显示一张图片有两种方式：一是使用img标签；二是使用背景图片。<br>（2）使用img标签，是通过HTML中实现；使用背景图片，是通过CSS实现。<br>（3）如果图片作为html的部分，并且想要被搜索引擎识别，则应该使用img标签。<br>（4）如果图片仅仅是起到修饰作用，并且不想被搜索引擎识别，则应该使用背景图片。。</p>
+					</article>
+				</section>
+		</section>
+
+
+	</section></main>
+</body>
+</html>
